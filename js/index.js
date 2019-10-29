@@ -22,19 +22,43 @@ pirateParagraph.addEventListener('copy', (event)=>{
 pirateParagraph.textContent = "You shouldn't have done that..."
 })
 
-// 4) select
+// 4) cut
+// const offendedParagraph = document.querySelectorAll ('.text-content','p')
+// console.log(offendedParagraph); 
+// offendedParagraph.addEventListener('cut', (event)=> {
+//     offendedParagraph.textContent= 'Ow!  Why would you do that?!'; 
+//     offendedParagraph.style.color= 'red'; 
+//     offendedParagraph.style.fontFamily= 'Creepster', 'cursive'; 
+// })
 
-// 5) load
+//5) scroll 
+// const offendedHeadline = document.querySelectorAll ('.text-content', 'h2'); 
+// console.log(offendedHeadline); 
+// offendedHeadline.addEventListener ('scroll', (event)=>{
+//     offendedHeadline.textContent= 'try cutting us, you know cntrl + x'; 
+// })
 
-//6) focus
 
-//7) scroll
 
-//8) dblclick 
+//6) dblclick 
 const oops = document.querySelector('body'); 
 console.log(oops); 
 oops.addEventListener('dblclick', (event)=> {
 window.location.href= ('https://youtu.be/bMu_l_0BgYs'); 
+})
+
+
+//7) keypress
+oops.addEventListener('keypress', (event)=>{
+    oops.style.backgroundColor= "#4CAF50"; 
+})
+
+//8) keyup
+
+const tipTop = document.querySelector('header'); 
+oops.addEventListener('keyup', (event)=>{
+    oops.style.backgroundColor = '#ACD1E1'; 
+    tipTop.style.backgroundColor= '#F5E1CF'; 
 })
 
 //9) mouseenter
