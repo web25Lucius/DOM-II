@@ -24,35 +24,34 @@ pirateParagraph.textContent = "You shouldn't have done that..."
 
 // 4) select
 
-
-
 // 5) load
 
 //6) focus
 
 //7) scroll
 
-//8) click 
+//8) dblclick 
+const oops = document.querySelector('body'); 
+console.log(oops); 
+oops.addEventListener('dblclick', (event)=> {
+window.location.href= ('https://youtu.be/bMu_l_0BgYs'); 
+})
 
 //9) mouseenter
-
-// const funnerBus = document.querySelector('img');
-// console.log(funnerBus); 
-// funnerBus.addEventListener( 'mouseenter', (event)=>{
-//     funnerBus.setAttribute= 'src', 'img/destination.jpg'; 
-// })
-
 
 const welh2 = document.querySelector('h2'); 
 console.log(welh2); 
 welh2.addEventListener('mouseenter', (event)=>{
     welh2.textContent = "Abandon Hope All Ye Who Enter Here"; 
+    welh2.style.textAlign = 'center'; 
+    welh2.style.fontFamily=  'Creepster', 'cursive;'; 
 })
 
 // 10) mouseleave
 
 welh2.addEventListener('mouseleave', (event)=>{
-    welh2.textContent= "Try selecting 'Let's Go'.. you can trust me..  Go ahead.."
+    welh2.textContent= "Try doubleclicking anywhere.. you can trust me..  Go ahead.."
+    welh2.style.fontFamily= 'Indie Flower', 'cursive'; 
 })
 
 
