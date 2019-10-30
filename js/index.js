@@ -22,22 +22,21 @@ pirateParagraph.addEventListener('copy', (event)=>{
 pirateParagraph.textContent = "You shouldn't have done that..."
 })
 
-// 4) cut
-// const offendedParagraph = document.querySelectorAll ('.text-content','p')
-// console.log(offendedParagraph); 
-// offendedParagraph.addEventListener('cut', (event)=> {
-//     offendedParagraph.textContent= 'Ow!  Why would you do that?!'; 
-//     offendedParagraph.style.color= 'red'; 
-//     offendedParagraph.style.fontFamily= 'Creepster', 'cursive'; 
-// })
+// 4) context menu
+const offendedParagraph = document.querySelector('.content-destination','p')
+console.log(offendedParagraph); 
+offendedParagraph.addEventListener('contextmenu', (event)=> {
+    offendedParagraph.textContent= 'Ow!  Why would you do that?!'; 
+    offendedParagraph.style.color= 'red'; 
+    offendedParagraph.style.fontFamily= 'Creepster', 'cursive'; 
+})
 
 //5) scroll 
-// const offendedHeadline = document.querySelectorAll ('.text-content', 'h2'); 
-// console.log(offendedHeadline); 
-// offendedHeadline.addEventListener ('scroll', (event)=>{
-//     offendedHeadline.textContent= 'try cutting us, you know cntrl + x'; 
-// })
-
+const offendedHeadline = document.querySelector('.content-destination', 'h2'); 
+console.log(offendedHeadline); 
+offendedHeadline.addEventListener ('scroll', (event)=>{
+    offendedHeadline.textContent= 'right click the bottom of the page....'; 
+})
 
 
 //6) dblclick 
