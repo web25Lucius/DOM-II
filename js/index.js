@@ -10,6 +10,7 @@ mouseLogo.style.backgroundColor = "#4287f5";
 // 2) click
 mouseLogo.addEventListener('click', (event)=>{
 mouseLogo.style.backgroundColor = "#FFFFFF";
+event.stopPropagation(); 
 })
 
 // 3) copy
@@ -24,7 +25,7 @@ pirateParagraph.textContent = "You shouldn't have done that..."
 
 // 4) context menu
 const offendedParagraph = document.querySelector('.content-destination','p')
-console.log(offendedParagraph); 
+//console.log(offendedParagraph); 
 offendedParagraph.addEventListener('contextmenu', (event)=> {
     offendedParagraph.textContent= 'Ow!  Why would you do that?!'; 
     offendedParagraph.style.color= 'red'; 
@@ -32,16 +33,15 @@ offendedParagraph.addEventListener('contextmenu', (event)=> {
 })
 
 //5) scroll 
-const offendedHeadline = document.querySelector('.content-destination', 'h2'); 
-console.log(offendedHeadline); 
-offendedHeadline.addEventListener ('scroll', (event)=>{
-    offendedHeadline.textContent= 'right click the bottom of the page....'; 
+const last = document.querySelector('a');
+console.log(last);  
+last.addEventListener('scroll', (event)=>{
+    last.textContent="rtClk boat pic..."; 
 })
-
 
 //6) dblclick 
 const oops = document.querySelector('body'); 
-console.log(oops); 
+//console.log(oops); 
 oops.addEventListener('dblclick', (event)=> {
 window.location.href= ('https://youtu.be/bMu_l_0BgYs'); 
 })
@@ -63,7 +63,7 @@ oops.addEventListener('keyup', (event)=>{
 //9) mouseenter
 
 const welh2 = document.querySelector('h2'); 
-console.log(welh2); 
+//console.log(welh2); 
 welh2.addEventListener('mouseenter', (event)=>{
     welh2.textContent = "Abandon Hope All Ye Who Enter Here"; 
     welh2.style.textAlign = 'center'; 
@@ -79,3 +79,18 @@ welh2.addEventListener('mouseleave', (event)=>{
 
 
 
+//11) nested with propagation stop in combination with 1) mouseover
+tipTop.addEventListener('mouseover', (event)=>{
+    tipTop.style.color= "gold";
+    tipTop.style.border= "5px dashed gold";  
+    event.stopPropagation(); 
+})
+
+//12) preventDefault(); on nav-links
+
+const stopDefault = document.querySelectorAll('.nav-link'); 
+console.log(stopDefault); //captured all nav a tags
+
+stopDefault.addEventListener("click", (event)=>{
+    event.preventDefault(); 
+})
