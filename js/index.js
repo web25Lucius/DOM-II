@@ -91,6 +91,9 @@ tipTop.addEventListener('mouseover', (event)=>{
 const stopDefault = document.querySelectorAll('.nav-link'); 
 console.log(stopDefault); //captured all nav a tags
 
-stopDefault.addEventListener("click", (event)=>{
-    event.preventDefault(); 
+stopDefault.forEach(item => {
+    item.addEventListener("click", (event)=> {
+        event.preventDefault(); 
 })
+
+});  
