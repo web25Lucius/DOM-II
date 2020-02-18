@@ -1,5 +1,7 @@
 // Your code goes here
 
+gsap.to(".nav-link", {stagger: 1, x: 300, rotation: 360, duration: 4}); 
+
 // 1) mouseover 
 const mouseLogo = document.querySelector ('.logo-heading');  
 // console.log(mouseLogo); 
@@ -98,4 +100,4 @@ stopDefault.forEach(item => {
 
 });  
 
-gsap.to(".nav-link", {stagger: 1, x: 300, rotation: 360, duration: 4}); 
+
