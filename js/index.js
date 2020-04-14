@@ -15,7 +15,7 @@ event.stopPropagation();
 
 // 3) copy
 const pirateParagraph = document.querySelector ('p'); 
-pirateParagraph.addEventListener('mouseover', (event)=>{
+pirateParagraph.addEventListener('mouseenter', (event)=>{
 pirateParagraph.textContent= "try copying me."; 
 })
 
@@ -30,10 +30,11 @@ offendedParagraph.addEventListener('contextmenu', (event)=> {
     offendedParagraph.textContent= 'Ow!  Why would you do that?!'; 
     offendedParagraph.style.color= 'red'; 
     offendedParagraph.style.fontFamily= 'Creepster', 'cursive'; 
+    offendedParagraph.style.fontSize= '24px';
 })
 
 //5) scroll 
-const last = document.querySelector('a');
+const last = document.querySelector('.btn');
 console.log(last);  
 last.addEventListener('scroll', (event)=>{
     last.textContent="rtClk boat pic..."; 
