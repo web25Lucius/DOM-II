@@ -32,13 +32,15 @@ offendedParagraph.addEventListener('contextmenu', (event)=> {
     offendedParagraph.textContent= 'Boo!'; 
     offendedParagraph.style.color= 'red'; 
     offendedParagraph.style.fontFamily= 'Creepster', 'cursive'; 
+    offendedParagraph.style.fontSize= '36px'; 
 })
 
 //5) scroll 
-const last = document.querySelector('a');
+const last = document.querySelector('.xena');
 console.log(last);  
 last.addEventListener('scroll', (event)=>{
-    last.textContent="rtClk boat pic..."; 
+    console.log(last); 
+    // last.textContent="rtClk boat pic..."; 
 })
 
 //6) dblclick 
