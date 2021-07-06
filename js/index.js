@@ -1,5 +1,7 @@
 // Your code goes here
 
+gsap.to(".nav-link", {stagger: 1, x: 300, rotation: 360, duration: 4}); 
+
 // 1) mouseover 
 const mouseLogo = document.querySelector ('.logo-heading');  
 // console.log(mouseLogo); 
@@ -27,7 +29,7 @@ pirateParagraph.textContent = "You shouldn't have done that..."
 const offendedParagraph = document.querySelector('.content-destination','p')
 //console.log(offendedParagraph); 
 offendedParagraph.addEventListener('contextmenu', (event)=> {
-    offendedParagraph.textContent= 'Ow!  Why would you do that?!'; 
+    offendedParagraph.textContent= 'Boo!'; 
     offendedParagraph.style.color= 'red'; 
     offendedParagraph.style.fontFamily= 'Creepster', 'cursive'; 
     offendedParagraph.style.fontSize= '24px';
@@ -98,3 +100,5 @@ stopDefault.forEach(item => {
 })
 
 });  
+
+
